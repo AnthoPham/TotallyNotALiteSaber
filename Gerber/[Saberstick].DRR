@@ -1,0 +1,25 @@
+---------------------------------------------------------------------------
+NCDrill File Report For: [Saberstick].CMPcbDoc   5/18/2020  8:33:21 PM
+---------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII RoundHoles File : [Saberstick].TXT
+
+Tool         Hole Size           Hole Type     Hole Count Plated       Tool Travel
+---------------------------------------------------------------------------
+T1        7.87mil (0.1999mm)       Round          4                0.09 Inch (2.33 mm)
+T2        10mil (0.254mm)          Round          33               5.05 Inch (128.35 mm)
+T3        31.5mil (0.8001mm)       Round          3                0.20 Inch (5.08 mm)
+T4        39.37mil (1mm)           Round          10               5.06 Inch (128.60 mm)
+T5        40mil (1.016mm)          Round          5                0.40 Inch (10.16 mm)
+T6        43.31mil (1.10007mm)     Round          3                0.20 Inch (5.08 mm)
+T7        52mil (1.3208mm)         Round          2                2.82 Inch (71.68 mm)
+T8        136mil (3.4544mm)        Round          2                2.26 Inch (57.52 mm)
+---------------------------------------------------------------------------
+Totals                                            62               16.09 Inch (408.79 mm)
+
+Two holes at same point : 1
+-----------------------
+3478,3672
+
+Total Processing Time (hh:mm:ss) : 00:00:00
