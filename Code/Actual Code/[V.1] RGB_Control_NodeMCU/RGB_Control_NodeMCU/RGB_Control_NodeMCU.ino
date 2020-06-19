@@ -102,7 +102,7 @@ void setup() {
   //schwoomanimation()
   //read EEPROM
   //
-
+  interrupts();
 }
 
 void loop() {
