@@ -3,12 +3,12 @@
 #include <Arduino.h>
 #include <Math.h> 
 
-#define SYS_GPIO 11   //Digital Pin 7
-#define Pixel_Data 10 //Digital Pin 6
-#define ENC_Button 9  //Digital Pin 5
-#define ENC_PIN_A 1   //Digital Pin 3
-#define ENC_PIN_B 2   //Digital Pin 0
-#define PGOOD 32      //Digital Pin 2 //Active low
+#define SYS_GPIO 7   //Digital Pin 7
+#define Pixel_Data 6 //Digital Pin 6
+#define ENC_Button 5  //Digital Pin 5
+#define ENC_PIN_A 3   //Digital Pin 3
+#define ENC_PIN_B 4   //Digital Pin 0
+#define PGOOD 2      //Digital Pin 2 //Active low
 
 const int N_LEDS = 7; //number of LEDS; 7 = test strip
 double exposure = 10;
