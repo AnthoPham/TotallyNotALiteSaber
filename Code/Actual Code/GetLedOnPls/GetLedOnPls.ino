@@ -47,7 +47,6 @@ void setup() {
   strip.fill(strip.Color(0, 0, 0));
   strip.setBrightness(255);
   strip.show();
-  Serial.begin(115200);
   
   noInterrupts();
   strip.begin();
@@ -56,14 +55,10 @@ void setup() {
 
   hue = random(0, 65534);
   schwoom();
-  Serial.begin(115200);
-  Serial.print("Initizlized");
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
-  Serial.print(
-  Serial.println()
 
 }
 
