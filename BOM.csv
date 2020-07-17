@@ -1,0 +1,27 @@
+CiivaID,Comment,Description,Designator,Footprint,LibRef,Quantity
+,,,,,,
+,LED Dialight 598-8110-107F,"598-8110-107F, Dialight, SMD LED 0805 Package, Red Single color SOLD IN INCREMENTS OF 4000. (REEL)","/CHG, /PGOOD, SCK1",PCB-9ifma0oh53wy532w7hco-1,"598-8110-107F, 598-8110-107F, CMP-1071566-9",3
+,Battery,Pcb Holder Thm 18650 Polarized,BAT1,PCB-nmv0vzhkfwsbxqx6kc1g-1,1043P,1
+,22pF,0805 22 pF 50 V ±5 % Tolerance NP0 SMT Multilayer Ceramic Capacitor,"C1, C2",C0805,CC0805JRNPO9BN220,2
+,1u,0603 1 uF 6.3 V ±10 % Tolerance X5R Surface Mount Multilayer Ceramic Capacitor,C3,CAPC1608X90X35LL15T15,06036D105KAT2A,1
+,4.7µF,0603 4.7 uF 10 V ±10 % Tolerance X5R SMT Multilayer Ceramic Capacitor,"C4, C5",CAPC1608X90X35LL15T15,CC0603KRX5R6BB475,2
+,100nF,CAP CER 0.1UF 100V 10% X7R 0805,"C6, C7, C8",PCB-2cfusdo6sp8ecp4m660c-1,08051C104K4T2A,3
+,4.7u,0805 4.7 uF 16 V ±10% Tolerance X5R SMT Multilayer Ceramic Capacitor,C9,CAPC2012X11N,GRM21BR61C475KA88L,1
+,ON Semiconductor MURS260T3G,MURS Series 2 A 600 V 75 ns Surface Mount Ultrafast Power Rectifier - CASE-403A,D1,PCB-jkdndedyhvwjcy08whko-1,MURS260T3G,1
+,Molex 47346-0001,"Micro-USB B Receptacle with Flange, Bottom Mount, Surface Mount, Lead-Free",J1,PCB-lw6upt0guqv556jll6nj-1,CMP-2328464-13,1
+,RGB Strip,"Board-To-Board Connector, Right Angle, WR-PHD Series, Through Hole, Header, 3, 2.54 mm",K1,HDR-3RA-M,61300311021,1
+,Molex 15-91-2080,Conn Unshrouded Header HDR 8 POS 2.54mm Solder ST SMD C-Grid Tube,P1,PCB-9z2s1xi4wyp5b0d33itb-1,CMP-0037c9391c13dff0-2,1
+,N-Channel MOSFET,MOSFET N-CH 60V 100A TO220-3,Q1,ONSC-TO-220-3-221A-09,CSD18532KCS,1
+,10k,Res Thick Film 0805 10K Ohm 1% 0.125W(1/8W) +/-100ppm/C Epoxy Pad SMD T/R,R1,PCB-lfoq2zshv8871jnijg7w-1,CMP-1854303-35,1
+,1k,Res Thick Film 0805 1K Ohm 1% 0.25W ±100ppm/°C Molded SMD Punched Carrier T/R,R2,PCB-bxx9w8jzwpp640jjc58j-1,ERJ-P06F1001V,1
+,1.5k,Thick Film Resistors - SMD 0.25W 1.5Kohm 1% 200ppm – 0805,"R3, R9, R10",RESC2013X60X30NL20T20,SG73P2ATTD1501F,3
+,45.3k,Res Thick Film 0805 45.3K Ohm 1% 0.125W(1/8W) ±100ppm/C Molded SMD Automotive Paper T/R,R4,PCB-15394kepv9f7eff3yv9i-1,CRCW080545K3FKEA,1
+,1.1k,Thick Film Resistors - SMD 0805 1.1Kohms 1% Tol,R5,RESC2013X70X40LL20T20,ERJ-6ENF1101V,1
+,1.13k,RES SMD 1.13K OHM 1% 1/8W 0805,R6,RESC2013X50X30NL20T20,CRCW08051K13FKEA,1
+,1 MOhm,Thick Film Resistors 0805 1Mohms 1% Tol,R7,RESC2013X70X40NL20T20,ERJ-6ENF1004V,1
+,100k,Res Thick Film 0805 100K Ohm 1% 0.125W(1/8W} 100ppm/Molded SMD Paper T/R,R8,RESC2013X60X35LL10T20,RC0805FR-07100KL,1
+,Push Button,Switch Tactile OFF (ON) SPST Round Button PC Pins 0.05A 24VDC 100000Cycles 1.57N Thru-Hole Loose,SW1,PCB-ig79pzg5mdpht1qqvy53-1,1825910-6,1
+,BQ24075RGTR,"USB-Friendly Li-Ion Battery Charger and Power-Path Management IC, Vout 5.5 V, 4.3 V, -40 to 85 degC, 16-pin QFN (RGT), Green (RoHS & no Sb/Br)",T1,RGT16-1700X1700TP,BQ24075RGTT,1
+,ATMEGA328P-AU,MCU 8-bit ATmega AVR RISC 32KB Flash 2.5V/3.3V/5V 32-Pin TQFP,U1,PCB-pmhtxxix7sripjdh33vl-1,ATMEGA328P-AU,1
+,Encoder Header,"Board-To-Board Connector, Right Angle, WR-PHD Series, Through Hole, Header, 5, 2.54 mm",X1,PCB-y3ve9b8dylm0s3m8lnid-1,61300511021,1
+780013,ABM3B-16.000MHZ-B2-T,CRYSTAL 16.000MHZ 18PF SMD,Y1,ABCN-ABM3B,CMP-780013-1,1

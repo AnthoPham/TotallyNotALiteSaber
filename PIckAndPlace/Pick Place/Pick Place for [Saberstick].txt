@@ -1,36 +1,36 @@
 Designator Footprint               Mid X         Mid Y         Ref X         Ref Y         Pad X         Pad Y TB      Rotation Comment        
 
-D1         PCB-jkdndedyhvwjcy08whko-1       7462mil       4231mil       7462mil       4231mil   7374.992mil       4231mil  T        360.00 ON Semiconductor MURS260T3G
-U1         PCB-pmhtxxix7sripjdh33vl-1       7671mil       3889mil       7671mil       3889mil       7502mil       4000mil  T          0.00 ATMEGA328P-AU  
-C1         C0805                 8258mil       3636mil       8258mil       3636mil       8258mil       3671mil  T        360.00 22pF           
-C2         C0805                 8082mil       3812mil       8082mil       3812mil       8047mil       3812mil  T         90.00 22pF           
-C3         CAPC1608X90X35LL15T15       6793mil       3569mil       6793mil       3569mil       6793mil    3543.41mil  T         90.00 1u             
-C6         PCB-2cfusdo6sp8ecp4m660c-1       6208mil       3578mil       6208mil       3578mil   6248.354mil       3578mil  T        180.00 100nF          
-C7         PCB-2cfusdo6sp8ecp4m660c-1       6304mil       4048mil       6304mil       4048mil   6263.646mil       4048mil  T        360.00 100nF          
-C8         PCB-2cfusdo6sp8ecp4m660c-1       7314mil       3960mil       7314mil       3960mil   7273.646mil       3960mil  T        360.00 100nF          
-K1         HDR-3RA-M         6001.998mil   3673.002mil       6002mil       3673mil   6001.996mil   3573.004mil  T         90.00 RGB Strip      
-Q1         ONSC-TO-220-3-221A-09       7186mil       3704mil       7186mil       3704mil       7186mil       3804mil  T        360.00 N-Channel MOSFET
-R2         PCB-bxx9w8jzwpp640jjc58j-1       7183mil       4251mil       7183mil       4251mil   7151.504mil       4251mil  T        360.00 1k             
-R4         PCB-15394kepv9f7eff3yv9i-1       6974mil       3788mil       6974mil       3788mil   7014.354mil       3788mil  T        180.00 45.3k          
-R5         RESC2013X70X40LL20T20       6663mil   3585.488mil       6663mil   3585.488mil       6663mil   3554.976mil  T         90.00 1.1k           
-R7         RESC2013X70X40NL20T20       6883mil       3630mil       6883mil       3630mil       6883mil   3664.448mil  T        270.00 1 MOhm         
-R8         RESC2013X60X35LL10T20       7379mil       3799mil       7379mil       3799mil   7347.504mil       3799mil  T        360.00 100k           
-R9         RESC2013X60X30NL20T20       6204mil       3675mil       6204mil       3675mil   6240.418mil       3675mil  T        180.00 1.5k           
-R10        RESC2013X60X30NL20T20       6204mil       3814mil       6204mil       3814mil   6240.418mil       3814mil  T        180.00 1.5k           
-SW1        PCB-ig79pzg5mdpht1qqvy53-1      11605mil       4160mil      11605mil       4160mil  11732.952mil   4071.418mil  T        180.00 Push Button    
-TI Battery RGT16-1700X1700TP       6736mil       3859mil       6736mil       3859mil   6765.528mil    3917.07mil  T        270.00 BQ24075RGTT    
-X1         PCB-y3ve9b8dylm0s3m8lnid-1      11741mil       3747mil      11741mil       3747mil      11741mil       3947mil  T          0.00 Encoder Header 
-Y1         ABCN-ABM3B            8057mil       3632mil       8057mil       3632mil    8135.74mil   3679.244mil  T        270.00 ABM3B-16.000MHZ-B2-T
-C4         CAPC1608X90X35LL15T15       6716mil       4103mil       6716mil       4103mil       6716mil    4128.59mil  T        270.00 4.7µF          
-C9         CAPC2012X11N          7384mil       3632mil       7384mil       3632mil   7419.434mil       3632mil  T        180.00 4.7u           
-P1         PCB-9z2s1xi4wyp5b0d33itb-1       8107mil       4093mil       8107mil       4093mil       7957mil    3995.56mil  T        360.00 Molex 15-91-2080
-R1         PCB-lfoq2zshv8871jnijg7w-1       6802mil       4106mil       6802mil       4106mil       6802mil   4144.386mil  T        270.00 10k            
-R3         RESC2013X60X30NL20T20       7025mil       4107mil       7025mil       4107mil   7061.418mil       4107mil  T        180.00 1.5k           
-R6         RESC2013X60X30LL20T20       6981mil       3898mil       6981mil       3898mil    7013.48mil       3898mil  T        180.00 590 Ohm        
-J1         PCB-lw6upt0guqv556jll6nj-1       6122mil   4217.343mil       6122mil       4270mil   6173.182mil   4164.686mil  T        180.00 Molex 47346-0001
-/CHG       PCB-9ifma0oh53wy532w7hco-1       6377mil       3679mil       6377mil       3679mil   6421.292mil       3679mil  T        180.00 LED Dialight 598-8110-107F
-/PGOOD     PCB-9ifma0oh53wy532w7hco-1       6380mil       3760mil       6380mil       3760mil   6424.292mil       3760mil  T        180.00 LED Dialight 598-8110-107F
-BAT1       PCB-nmv0vzhkfwsbxqx6kc1g-1       9826mil       3909mil       9826mil       3909mil       8415mil       3909mil  B        180.00 Battery        
-C5         CAPC1608X90X35LL15T15       6298mil       3963mil       6298mil       3963mil    6323.59mil       3963mil  T        180.00 4.7µF          
 SCK1       PCB-9ifma0oh53wy532w7hco-1       7228mil       4111mil       7228mil       4111mil   7272.292mil       4111mil  T        180.00 LED Dialight 598-8110-107F
+C5         CAPC1608X90X35LL15T15       6298mil       3963mil       6298mil       3963mil    6323.59mil       3963mil  T        180.00 4.7µF          
+BAT1       PCB-nmv0vzhkfwsbxqx6kc1g-1       9826mil       3909mil       9826mil       3909mil       8415mil       3909mil  B        180.00 Battery        
+/PGOOD     PCB-9ifma0oh53wy532w7hco-1       6380mil       3760mil       6380mil       3760mil   6424.292mil       3760mil  T        180.00 LED Dialight 598-8110-107F
+/CHG       PCB-9ifma0oh53wy532w7hco-1       6377mil       3679mil       6377mil       3679mil   6421.292mil       3679mil  T        180.00 LED Dialight 598-8110-107F
+J1         PCB-lw6upt0guqv556jll6nj-1       6122mil   4217.343mil       6122mil       4270mil   6173.182mil   4164.686mil  T        180.00 Molex 47346-0001
+R6         RESC2013X50X30NL20T20       6981mil       3898mil       6981mil       3898mil   7017.417mil       3898mil  T        180.00 1.13k          
+R3         RESC2013X60X30NL20T20       7025mil       4107mil       7025mil       4107mil   7061.418mil       4107mil  T        180.00 1.5k           
+R1         PCB-lfoq2zshv8871jnijg7w-1       6802mil       4106mil       6802mil       4106mil       6802mil   4144.386mil  T        270.00 10k            
+P1         PCB-9z2s1xi4wyp5b0d33itb-1       8107mil       4093mil       8107mil       4093mil       7957mil    3995.56mil  T        360.00 Molex 15-91-2080
+C9         CAPC2012X11N          7384mil       3632mil       7384mil       3632mil   7419.434mil       3632mil  T        180.00 4.7u           
+C4         CAPC1608X90X35LL15T15       6716mil       4103mil       6716mil       4103mil       6716mil    4128.59mil  T        270.00 4.7µF          
+Y1         ABCN-ABM3B            8057mil       3632mil       8057mil       3632mil    8135.74mil   3679.244mil  T        270.00 ABM3B-16.000MHZ-B2-T
+X1         PCB-y3ve9b8dylm0s3m8lnid-1      11741mil       3747mil      11741mil       3747mil      11741mil       3947mil  T          0.00 Encoder Header 
+T1         RGT16-1700X1700TP       6736mil       3859mil       6736mil       3859mil   6765.528mil    3917.07mil  T        270.00 CMP-1417872-2  
+SW1        PCB-ig79pzg5mdpht1qqvy53-1      11605mil       4160mil      11605mil       4160mil  11477.048mil   4071.418mil  T        180.00 Push Button    
+R10        RESC2013X60X30NL20T20       6204mil       3814mil       6204mil       3814mil   6240.418mil       3814mil  T        180.00 1.5k           
+R9         RESC2013X60X30NL20T20       6204mil       3675mil       6204mil       3675mil   6240.418mil       3675mil  T        180.00 1.5k           
+R8         RESC2013X60X35LL10T20       7379mil       3799mil       7379mil       3799mil   7347.504mil       3799mil  T        360.00 100k           
+R7         RESC2013X70X40NL20T20       6883mil       3630mil       6883mil       3630mil       6883mil   3664.448mil  T        270.00 1 MOhm         
+R5         RESC2013X70X40LL20T20       6663mil   3585.488mil       6663mil   3585.488mil       6663mil   3554.976mil  T         90.00 1.1k           
+R4         PCB-15394kepv9f7eff3yv9i-1       6974mil       3788mil       6974mil       3788mil   7014.354mil       3788mil  T        180.00 45.3k          
+R2         PCB-bxx9w8jzwpp640jjc58j-1       7183mil       4251mil       7183mil       4251mil   7151.504mil       4251mil  T        360.00 1k             
+Q1         ONSC-TO-220-3-221A-09       7186mil       3704mil       7186mil       3704mil       7186mil       3804mil  T        360.00 N-Channel MOSFET
+K1         HDR-3RA-M         6001.998mil   3673.002mil       6002mil       3673mil   6001.996mil   3573.004mil  T         90.00 RGB Strip      
+C8         PCB-2cfusdo6sp8ecp4m660c-1       7314mil       3960mil       7314mil       3960mil   7273.646mil       3960mil  T        360.00 100nF          
+C7         PCB-2cfusdo6sp8ecp4m660c-1       6304mil       4048mil       6304mil       4048mil   6263.646mil       4048mil  T        360.00 100nF          
+C6         PCB-2cfusdo6sp8ecp4m660c-1       6208mil       3578mil       6208mil       3578mil   6248.354mil       3578mil  T        180.00 100nF          
+C3         CAPC1608X90X35LL15T15       6793mil       3569mil       6793mil       3569mil       6793mil    3543.41mil  T         90.00 1u             
+C2         C0805                 8082mil       3812mil       8082mil       3812mil       8047mil       3812mil  T         90.00 22pF           
+C1         C0805                 8258mil       3636mil       8258mil       3636mil       8258mil       3671mil  T        360.00 22pF           
+U1         PCB-pmhtxxix7sripjdh33vl-1       7671mil       3889mil       7671mil       3889mil       7502mil       4000mil  T          0.00 ATMEGA328P-AU  
+D1         PCB-jkdndedyhvwjcy08whko-1       7462mil       4231mil       7462mil       4231mil   7374.992mil       4231mil  T        360.00 ON Semiconductor MURS260T3G
 

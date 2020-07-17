@@ -1,10 +1,10 @@
-
 #include <Adafruit_NeoPixel.h>
 #include <EEPROM.h> //This will be used to store the state value to enter after startup
 #include <Arduino.h>
 #include <Math.h> 
+#include "TimerOne.h"
 
-const int N_LEDS = 162;
+const int N_LEDS = 7;
 double exposure = 10;
 double wait = 65525/1000;
 double hue = 0;
@@ -13,19 +13,34 @@ int multiplier = 0;
 int newmult = 0;
 int pixel = 0;
 int boot = 0;
-unsigned long previousmillis = 0;
+
 
 
 //Encoder pins
-const int encoderPinA= 12; 
-const int encoderPinB= 13;
+const int encoderPinA= 3; 
+const int encoderPinB= 4;
 boolean encoderA = 0;
 boolean encoderB = 0;
-const int buttonpin = 14;
+const int buttonpin = 5;
 int encoder = 0;
 int button = 0;
 int prevbutton = 0;
 int buttoncount = 0;
+
+//BQ charger related pins and reads
+const int PGOOD = 2;
+boolean PGOOD_read = 0;
+const int sys_gpio = 7;
+
+
+//"sleep timer"
+/*
+ * If the difference between mill1 and mill2 
+ */
+
+unsigned long mill1 = 0; 
+unsigned long mill2 = 0;
+int count = 0;
 
 
 
@@ -56,45 +71,42 @@ int timebased = 0; //case 2 and 1
 unsigned int array[4000];
 int bright4 = 0;
 
-Adafruit_NeoPixel strip = Adafruit_NeoPixel(N_LEDS, 15, NEO_GRB + NEO_KHZ800);
+Adafruit_NeoPixel strip = Adafruit_NeoPixel(N_LEDS, 6, NEO_GRB + NEO_KHZ800);
 
 
 void setup() {
   
-  // initialize serial communication at 115200
+  
   strip.fill(strip.Color(0, 0, 0));
   strip.setBrightness(255);
   strip.show();
-  Serial.begin(115200);
+  Serial.begin(115200); // initialize serial communication at 115200
+
+  pinMode(PGOOD, INPUT); //set as input just to read when USB is powered
+  //pinMode(sys_gpio, OUTPUT); //set as output to control the FET that can disconnect the sys_gpio
+
+  
   
   noInterrupts();
   strip.begin();
   strip.fill(strip.Color(0, 0, 0));
   strip.show();
-
-//  for(int i = 0; i < 4000; i++) {
-//    array[i] = min(
-//  }
-  
   hue = random(0, 65534);
   schwoom();
   
   // create timer clocks
   // 1. 10ms clock for glows
   // create interrupt based on timer
-  timer1_attachInterrupt(TimerISR);
-  timer1_enable(TIM_DIV16, TIM_EDGE, TIM_SINGLE);
-  timer1_write(1000); //(80MHz clock/16) = 5 MHz clock. 5MHz clock * 70000 cycles = 0.014s. (You can check this with the Serial.println statement.
-                       // This can obviously be configured to whatever you want. 
-                       // This just happens to be the frequency that allows the brightness increment/decrement to match my breathing cycle
-   
-  // create interrupt based on digital pins used by rotary encoder
+  Timer1.initialize(14000);
+  Timer1.attachInterrupt(background);
+
   pinMode(encoderPinA, INPUT_PULLUP);
   pinMode(encoderPinB, INPUT_PULLUP);
   pinMode(buttonpin, INPUT_PULLUP);
-  digitalWrite(encoderPinA, LOW);
-  digitalWrite(encoderPinB, LOW);
-  attachInterrupt(encoderPinA, EncoderAISR, CHANGE);
+  digitalWrite(encoderPinA, HIGH);
+  digitalWrite(encoderPinB, HIGH);
+  attachInterrupt(1, EncoderAISR, CHANGE);
+  
   // create interrupt based on button (from rotatry encoder). I may not need this?
 
   //read EEPROM for state to enter after startup.
@@ -103,6 +115,7 @@ void setup() {
   //read EEPROM
   //
   interrupts();
+  millis1 = millis();
 }
 
 void loop() {
@@ -130,8 +143,16 @@ void schwoom() {
   }
 }
 
-void TimerISR() { //10ms timer ISR
+void background() { //10ms timer ISR
 //  Serial.println(" Timer ISR begin" ); //useful for seeing Hz of TimerISR
+  millis2 = millis();
+  if((millis2 - millis1 >= 1000) {
+    millis1 = millis2;
+    count += 1;
+    if(count >= 900) {
+      
+    }
+  }
   switch(mainstate) {
     case 0: //start up
       stateincrement();
@@ -173,29 +194,8 @@ void TimerISR() { //10ms timer ISR
       break;
     case 4: //Brightness controlled randomlly
       if(pixel < N_LEDS) {
-//        bright4 = min( (int) round(41*sin(2*3.14*2000*pixel/100000)+120-41*cos(3.14*2000*pixel/100000)+41*sin(2*3.14*pixel/14)), 255);
-        bright4 = random(0, 245);
-        strip.setPixelColor(random(0,N_LEDS), strip.ColorHSV(hue, 255, bright4));
-        strip.setPixelColor(random(0,N_LEDS), strip.ColorHSV(hue, 255, bright4));
-        strip.setPixelColor(random(0,N_LEDS), strip.ColorHSV(hue, 255, bright4));
-        strip.setPixelColor(random(0,N_LEDS), strip.ColorHSV(hue, 255, bright4));
-        strip.setPixelColor(random(0,N_LEDS), strip.ColorHSV(hue, 255, bright4));
-        strip.setPixelColor(random(0,N_LEDS), strip.ColorHSV(hue, 255, bright4));
-        strip.setPixelColor(random(0,N_LEDS), strip.ColorHSV(hue, 255, bright4));
-        strip.setPixelColor(random(0,N_LEDS), strip.ColorHSV(hue, 255, bright4));
-        strip.setPixelColor(random(0,N_LEDS), strip.ColorHSV(hue, 255, bright4));
-        strip.setPixelColor(random(0,N_LEDS), strip.ColorHSV(hue, 255, bright4));
-        strip.setPixelColor(random(0,N_LEDS), strip.ColorHSV(hue, 255, bright4));
-        strip.setPixelColor(random(0,N_LEDS), strip.ColorHSV(hue, 255, bright4));
-        strip.setPixelColor(random(0,N_LEDS), strip.ColorHSV(hue, 255, bright4));
-        strip.setPixelColor(random(0,N_LEDS), strip.ColorHSV(hue, 255, bright4));
-        strip.setPixelColor(random(0,N_LEDS), strip.ColorHSV(hue, 255, bright4));
-        strip.setPixelColor(random(0,N_LEDS), strip.ColorHSV(hue, 255, bright4));
-        strip.setPixelColor(random(0,N_LEDS), strip.ColorHSV(hue, 255, bright4));
-        strip.setPixelColor(random(0,N_LEDS), strip.ColorHSV(hue, 255, bright4));
-        strip.setPixelColor(random(0,N_LEDS), strip.ColorHSV(hue, 255, bright4));
-        strip.setPixelColor(random(0,N_LEDS), strip.ColorHSV(hue, 255, bright4));
-        pixel=pixel+2;
+        bright4 = min( (int) round(41*sin(2*3.14*2000*pixel/100000)+120-41*cos(3.14*2000*pixel/100000)+41*sin(2*3.14*pixel/14)), 255);
+        pixel+=1;
       }
       else {
         pixel = 0;
@@ -260,12 +260,12 @@ void TimerISR() { //10ms timer ISR
 //  Serial.println(brightness); //debug line
   
   strip.show();                              // show on RGB strip
-  timer1_write(1000); //reset timer
+//  timer1_write(1000); //reset timer
 }
 
 
 
-ICACHE_RAM_ATTR void EncoderAISR(void) {
+void EncoderAISR(void) {
   encoderA = digitalRead(encoderPinA);
   encoderB = digitalRead(encoderPinB);
 
@@ -308,8 +308,8 @@ ICACHE_RAM_ATTR void EncoderAISR(void) {
 //  strip.fill(strip.ColorHSV(hue));           //apply color
 //  strip.show();                              // show on RGB strip 
   // Debug serial prints
-  Serial.print("Encoder ");
-  Serial.println(encoder);
+//  Serial.print("Encoder ");
+//  Serial.println(encoder);
 //
 //  Serial.print("| Brightness  ");
 //  Serial.print(brightness);

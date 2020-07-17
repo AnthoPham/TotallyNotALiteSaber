@@ -1,12 +1,12 @@
 #include <Adafruit_NeoPixel.h>
 // #include <FastLED.h>
-const int N_LEDS = 60;
+const int N_LEDS = 7;
 double exposure = 10;
 double wait = 0;
 unsigned long previousmillis = 0;
 double hue = 0;
 
-Adafruit_NeoPixel strip = Adafruit_NeoPixel(N_LEDS, 9, NEO_GRB + NEO_KHZ800);
+Adafruit_NeoPixel strip = Adafruit_NeoPixel(N_LEDS, 6, NEO_GRB + NEO_KHZ800);
 
 void setup() {
   Serial.begin(9600);

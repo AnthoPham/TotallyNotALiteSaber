@@ -1,14 +1,15 @@
 Project Outputs Generation Report
 ---------------------------------
-Start Output Generation At 1:27:57 PM On 7/6/2020
+Start Output Generation At 1:56:35 PM On 7/7/2020
 
 Output: Pick Place
 Type  : Pick Place
 From  : Variant [[No Variations]] of PCB Document [[Saberstick].CMPcbDoc]
    Generated File[Pick Place for [Saberstick].txt]
+   Generated File[Pick Place for [Saberstick].csv]
 
 
-Files Generated   : 1
+Files Generated   : 2
 Documents Printed : 0
 
-Finished Output Generation At 1:27:57 PM On 7/6/2020
+Finished Output Generation At 1:56:35 PM On 7/7/2020
