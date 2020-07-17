@@ -14,8 +14,6 @@ int newmult = 0;
 int pixel = 0;
 int boot = 0;
 
-
-
 //Encoder pins
 const int encoderPinA= 3; 
 const int encoderPinB= 4;
@@ -38,8 +36,8 @@ const int sys_gpio = 7;
  * If the difference between mill1 and mill2 
  */
 
-unsigned long mill1 = 0; 
-unsigned long mill2 = 0;
+unsigned long millis1 = 0; 
+unsigned long millis2 = 0;
 int count = 0;
 
 
@@ -58,10 +56,9 @@ int mainstate = 0; //
    9 = BLUE
    10 = INDIGO
    11 = VIOLET
+   12 = Charging
 
    5 - 11 have pot controlled brightness
-
-   12...?
 
 */
 
@@ -83,7 +80,16 @@ void setup() {
   Serial.begin(115200); // initialize serial communication at 115200
 
   pinMode(PGOOD, INPUT); //set as input just to read when USB is powered
-  //pinMode(sys_gpio, OUTPUT); //set as output to control the FET that can disconnect the sys_gpio
+  pinMode(sys_gpio, OUTPUT); //set as output to control the FET that can disconnect the sys_gpio
+  digitalWrite(sys_gpio, HIGH);
+  PGOOD_read = digitalRead(PGOOD); //0 = Low = USB powered, 1 = High = No USB power
+  if(PGOOD_read == LOW) {
+    mainstate = 13; //keeps the RGB off when powered off of usb
+  }
+  else {
+    mainstate = 0;
+    //mainstate should remain 0 to allow for proper stuff
+  }
 
   
   
@@ -128,6 +134,9 @@ void stateincrement() { //should also blink blink to indicate new state
     case 11:
       mainstate = 0;
       break;
+    case 13:
+      mainstate = 13;
+      break;
     default:
       mainstate++;
       break;
@@ -146,11 +155,11 @@ void schwoom() {
 void background() { //10ms timer ISR
 //  Serial.println(" Timer ISR begin" ); //useful for seeing Hz of TimerISR
   millis2 = millis();
-  if((millis2 - millis1 >= 1000) {
+  if(millis2 - millis1 >= 1000) {
     millis1 = millis2;
     count += 1;
     if(count >= 900) {
-      
+      digitalWrite(sys_gpio, LOW);
     }
   }
   switch(mainstate) {
@@ -234,6 +243,19 @@ void background() { //10ms timer ISR
       hue = 65535*270/360;
       strip.fill(strip.ColorHSV(hue));
       break;
+//    case 12:
+//      if(pixel < N_LEDS) {
+//        bright4 = min( (int) round(41*sin(2*3.14*2000*pixel/100000)+120-41*cos(3.14*2000*pixel/100000)+41*sin(2*3.14*pixel/14)), 255);
+//        pixel+=1;
+//      }
+//      else {
+//        pixel = 0;
+//      }
+//      break;
+    case 13:
+      strip.fill(strip.Color(0, 0, 0));
+      strip.show();
+      break;   
   }
     
   button = digitalRead(buttonpin);
